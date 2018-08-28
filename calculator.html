@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form class="flex-buttons">
+        <input id="firstNumber" placeholder="put fistNumber">
+        <input id="secondNumber" placeholder="put secondNumber">
+    </form>
+        <button id="sumBotton" onclick="getSum()">+</button>
+        <button id="minusBotton" onclick="getMinus()">-</button>
+        <button id="multiplyBotton" onclick="getMultiply()">*</button>
+        <button id="divideBotton" onclick="getDivide()">/</button>
+    <div id="output"></div>
+        <script>
+            var firstNumber = document.getElementById("firstNumber");
+            var secondNumber = document.getElementById("secondNumber");
+            var output = document.getElementById("output");
+            
+            function showResult(result){
+              
+                output.innerHTML = "answer: " + result;
+                
+            }
+            function getSum(){
+                let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+                showResult(sum);
+            } function getMinus(){
+                let minus = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+                showResult(minus);
+            } function getMultiply(){
+                let multiply = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+                showResult(multiply);
+            } function getDivide(){
+                let divide = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+                showResult(divide);
+            }
+        </script>
+</body>
+</html>

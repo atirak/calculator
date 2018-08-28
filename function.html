@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function calculate(param1, param2){
+        return param1 + param2;
+    }
+    console.log(calculate(10,5));
+
+    var calculate = function(param1, param2){
+        return param1 * param2;
+    }
+    console.log(calculate(10,5));
+
+    //Callback function
+    function say(){
+        console.log("Say...");
+        function sayHI(){
+            setTimeout(function (){console.log("Hi");},3000);
+        }
+        sayHI();
+        console.log("Bye");
+    }
+    say();
+</script>
+</html>
