@@ -7,44 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="element1">Hello world</h1>
-    <script>
-        function say(message){
-            var element = document.querySelector("#element1");
-            element.innerHTML = message;
-        }
-        say("Hello World for javascript");
-
-        // console.log("hello guy");
-
-        // var abc = 10;
-        // console.log(abc);
-        // test = "buu";
-        // console.log("test");
-        // var flag = true;
-        // var emt = null;
-        // var test2;
-        // console.log(flag,emt,test2)
-
-        // let myValue = "10";
-        // let secondValue = 10;
-        // console.log(myValue + secondValue);
-        // console.log(myValue - secondValue);
-        // console.log(myValue * secondValue);
-
-        // console.log(myValue == secondValue);
-        // console.log(myValue === secondValue);
-
-        var array = [];
-        array[0] = 1;
-        array[1] = 2;
-        console.log(array);
-        array[4] = 3;
-        console.log(array);
-
-        var newValue = true ? "foo" : "bar";
-        newValue = 1>2 ? "foo" : "bar";
-        console.log(newValue);
-    </script>
+    <form class="flex-buttons">
+        <input id="firstNumber" placeholder="put fistNumber">
+        <input id="secondNumber" placeholder="put secondNumber">
+    </form>
+        <button id="sumBotton" onclick="getSum()">+</button>
+        <button id="minusBotton" onclick="getMinus()">-</button>
+        <button id="multiplyBotton" onclick="getMultiply()">*</button>
+        <button id="divideBotton" onclick="getDivide()">/</button>
+    <div id="output"></div>
+        <script>
+            var firstNumber = document.getElementById("firstNumber");
+            var secondNumber = document.getElementById("secondNumber");
+            var output = document.getElementById("output");
+            
+            function showResult(result){
+              
+                output.innerHTML = "answer: " + result;
+                
+            }
+            function getSum(){
+                let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+                showResult(sum);
+            } function getMinus(){
+                let minus = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+                showResult(minus);
+            } function getMultiply(){
+                let multiply = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+                showResult(multiply);
+            } function getDivide(){
+                let divide = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+                showResult(divide);
+            }
+        </script>
 </body>
 </html>
